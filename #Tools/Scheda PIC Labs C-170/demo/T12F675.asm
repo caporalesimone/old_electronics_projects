@@ -1,0 +1,74 @@
+
+; PicBasic Pro Compiler 2.44, (c) 1998, 2003 microEngineering Labs, Inc. All Rights Reserved. 
+_USED			EQU	1
+
+	INCLUDE	"C:\PROGRA~1\PBP\12F675.INC"
+
+RAM_START       		EQU	00020h
+RAM_END         		EQU	0005Fh
+RAM_BANKS       		EQU	00001h
+BANK0_START     		EQU	00020h
+BANK0_END       		EQU	0005Fh
+EEPROM_START    		EQU	02100h
+EEPROM_END      		EQU	0217Fh
+
+R0              		EQU	RAM_START + 000h
+R1              		EQU	RAM_START + 002h
+R2              		EQU	RAM_START + 004h
+R3              		EQU	RAM_START + 006h
+R4              		EQU	RAM_START + 008h
+R5              		EQU	RAM_START + 00Ah
+R6              		EQU	RAM_START + 00Ch
+R7              		EQU	RAM_START + 00Eh
+R8              		EQU	RAM_START + 010h
+FLAGS           		EQU	RAM_START + 012h
+GOP             		EQU	RAM_START + 013h
+RM1             		EQU	RAM_START + 014h
+RM2             		EQU	RAM_START + 015h
+RR1             		EQU	RAM_START + 016h
+RR2             		EQU	RAM_START + 017h
+_PORTL           		EQU	 GPIO
+_PORTH           		EQU	 GPIO
+_TRISL           		EQU	 TRISIO
+_TRISH           		EQU	 TRISIO
+#define _GPIO_0          	 GPIO, 000h
+#define _GPIO_1          	 GPIO, 001h
+#define _GPIO_2          	 GPIO, 002h
+#define _GPIO_4          	 GPIO, 004h
+#define _GPIO_5          	 GPIO, 005h
+	INCLUDE	"TEST12~1.MAC"
+	INCLUDE	"C:\PROGRA~1\PBP\PBPPIC14.LIB"
+
+	MOVE?CB	000h, TRISIO
+	MOVE?CB	000h, ANSEL
+	MOVE?CB	000h, ADCON0
+	MOVE?CT	000h, _GPIO_0
+	MOVE?CT	000h, _GPIO_1
+	MOVE?CT	000h, _GPIO_2
+	MOVE?CT	000h, _GPIO_4
+	MOVE?CT	000h, _GPIO_5
+
+	LABEL?L	_LOOP	
+	MOVE?CT	001h, _GPIO_0
+	PAUSE?C	007D0h
+	MOVE?CT	000h, _GPIO_0
+	PAUSE?C	007D0h
+	MOVE?CT	001h, _GPIO_1
+	PAUSE?C	007D0h
+	MOVE?CT	000h, _GPIO_1
+	PAUSE?C	007D0h
+	MOVE?CT	001h, _GPIO_2
+	PAUSE?C	007D0h
+	MOVE?CT	000h, _GPIO_2
+	PAUSE?C	007D0h
+	MOVE?CT	001h, _GPIO_4
+	PAUSE?C	007D0h
+	MOVE?CT	000h, _GPIO_4
+	PAUSE?C	007D0h
+	MOVE?CT	001h, _GPIO_5
+	PAUSE?C	007D0h
+	MOVE?CT	000h, _GPIO_5
+	PAUSE?C	007D0h
+	GOTO?L	_LOOP
+
+	END

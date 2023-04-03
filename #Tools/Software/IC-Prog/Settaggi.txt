@@ -1,0 +1,8 @@
+Settaggi per la scheda CProject C-170  (www.c-project.com)
+
+
+Programmer -> ProPic2 Programmer
+
+Interface -> Direct I/O
+
+Communication -> Invert MCRL e Invert VCC

@@ -1,0 +1,89 @@
+
+; PicBasic Pro Compiler 2.44, (c) 1998, 2003 microEngineering Labs, Inc. All Rights Reserved. 
+_USED			EQU	1
+
+	INCLUDE	"C:\PROGRA~1\PBP\16F676.INC"
+
+
+; Define statements.
+#define		OSC		 20
+
+RAM_START       		EQU	00020h
+RAM_END         		EQU	0005Fh
+RAM_BANKS       		EQU	00001h
+BANK0_START     		EQU	00020h
+BANK0_END       		EQU	0005Fh
+EEPROM_START    		EQU	02100h
+EEPROM_END      		EQU	0217Fh
+
+R0              		EQU	RAM_START + 000h
+R1              		EQU	RAM_START + 002h
+R2              		EQU	RAM_START + 004h
+R3              		EQU	RAM_START + 006h
+R4              		EQU	RAM_START + 008h
+R5              		EQU	RAM_START + 00Ah
+R6              		EQU	RAM_START + 00Ch
+R7              		EQU	RAM_START + 00Eh
+R8              		EQU	RAM_START + 010h
+FLAGS           		EQU	RAM_START + 012h
+GOP             		EQU	RAM_START + 013h
+RM1             		EQU	RAM_START + 014h
+RM2             		EQU	RAM_START + 015h
+RR1             		EQU	RAM_START + 016h
+RR2             		EQU	RAM_START + 017h
+_CONTA           		EQU	RAM_START + 018h
+_TEMP            		EQU	RAM_START + 019h
+_PORTL           		EQU	 PORTA
+_PORTH           		EQU	 PORTC
+_TRISL           		EQU	 TRISA
+_TRISH           		EQU	 TRISC
+#define _PORTA_0         	 PORTA, 000h
+#define _PORTA_1         	 PORTA, 001h
+#define _PORTA_2         	 PORTA, 002h
+#define _PORTC_0         	 PORTC, 000h
+#define _PORTC_1         	 PORTC, 001h
+#define _PORTC_2         	 PORTC, 002h
+#define _PORTC_3         	 PORTC, 003h
+#define _PORTC_4         	 PORTC, 004h
+#define _PORTC_5         	 PORTC, 005h
+	INCLUDE	"TEST16~1.MAC"
+	INCLUDE	"C:\PROGRA~1\PBP\PBPPIC14.LIB"
+
+	MOVE?CB	000h, TRISA
+	MOVE?CB	000h, TRISC
+	MOVE?CT	000h, _PORTA_0
+	MOVE?CT	000h, _PORTA_1
+	MOVE?CT	000h, _PORTA_2
+	MOVE?CT	000h, _PORTC_0
+	MOVE?CT	000h, _PORTC_1
+	MOVE?CT	000h, _PORTC_2
+	MOVE?CT	000h, _PORTC_3
+	MOVE?CT	000h, _PORTC_4
+	MOVE?CT	000h, _PORTC_5
+
+	LABEL?L	_LOOP	
+	MOVE?CB	001h, _TEMP
+	MOVE?CB	000h, _CONTA
+	LABEL?L	L00001	
+	CMPGT?BCL	_CONTA, 002h, L00002
+	MOVE?BB	_TEMP, PORTA
+	PAUSE?C	007D0h
+	SHIFTL?BCB	_TEMP, 001h, _TEMP
+	NEXT?BCL	_CONTA, 001h, L00001
+	LABEL?L	L00002	
+	MOVE?CT	000h, _PORTA_2
+	PAUSE?C	007D0h
+	MOVE?CB	001h, _TEMP
+	MOVE?CB	000h, _CONTA
+	LABEL?L	L00003	
+	CMPGT?BCL	_CONTA, 005h, L00004
+	MOVE?BB	_TEMP, PORTC
+	PAUSE?C	007D0h
+	SHIFTL?BCB	_TEMP, 001h, _TEMP
+	NEXT?BCL	_CONTA, 001h, L00003
+	LABEL?L	L00004	
+	MOVE?CT	000h, _PORTC_5
+	PAUSE?C	007D0h
+	GOTO?L	_LOOP
+
+	END

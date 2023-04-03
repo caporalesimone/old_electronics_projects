@@ -1,0 +1,3 @@
+Settaggi per la scheda CProject C-170  (www.c-project.com)
+
+Come interface dovrebbe essere : Tait, 7407(driver) + PNP transistor 
