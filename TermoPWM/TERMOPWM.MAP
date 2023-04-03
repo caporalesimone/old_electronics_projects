@@ -1,0 +1,213 @@
+Linker command line:
+
+-z -h+D:\PIC\TERMOPWM.SYM -mD:\PIC\TERMOPWM.MAP \
+  -ppowerup=00h,intentry=04h,intcode,intret,init,init23,end_init,clrtext,stringtable,pstrings,strings \
+  -ABANK0=020h-07Fh -prbit_0=BANK0,rbss_0=BANK0,rdata_0=BANK0,idata_0=CODE \
+  -ABANK1=0A0h-0EFh -prbit_1=BANK1,rbss_1=BANK1,rdata_1=BANK1,idata_1=CODE \
+  -ABANK2=0110h-016Fh \
+  -prbit_2=BANK2,rbss_2=BANK2,rdata_2=BANK2,idata_2=CODE \
+  -ABANK3=0190h-01EFh \
+  -prbit_3=BANK3,rbss_3=BANK3,rdata_3=BANK3,idata_3=CODE \
+  -ACOMBANK=070h-07Fh -ptemp=COMBANK -ACODE=0-7FFhx4 -ACONST=0-0FFhx32 \
+  -pconfig=2007h -pidloc=2000h -AEEDATA=2100h-21FFh -peeprom_data=EEDATA \
+  -pfloat_text0=CODE,float_text1=CODE,float_text2=CODE \
+  -pfloat_text3=CODE,float_text4=CODE \
+  -pnvram=BANK0,nvram_1=BANK1,nvram_2=BANK2,nvram_3=BANK3 \
+  -pnvbit_0=BANK0,nvbit_1=BANK1,nvbit_2=BANK2,nvbit_3=BANK3 -Q16F876A \
+  -oC:\WINDOWS\TEMP\L.OBJ C:\PIC\LIB\PICRT42C.OBJ TERMOPWM.OBJ \
+  C:\PIC\LIB\PIC42C-C.LIB 
+
+Object code version is 3.7
+
+Machine type is 16F876A
+
+Call graph:
+
+*_main size 0,2 offset 0
+*    awdiv
+
+		Name          Link     Load   Length Selector Space Scale
+C:\PIC\LIB\PICRT42C.OBJ
+		end_init         4        4        4       8     0
+TERMOPWM.OBJ    temp            70       70        6      70     1
+		text12         685      685       31     D0A     0
+		text8          6B6      6B6       74     D6C     0
+		text5          660      660       25     CC0     0
+		text1          72A      72A       87     E54     0
+
+C:\PIC\LIB\PIC42C-C.LIB
+awdiv.obj       float_tex      7B1      7B1       15     F62     0
+		temp            70       70        7      70     1
+btemp0.obj      temp            70       70        1      70     1
+btemp1.obj      temp            70       70        2      70     1
+btemp2.obj      temp            70       70        3      70     1
+btemp3.obj      temp            70       70        4      70     1
+btemp4.obj      temp            70       70        5      70     1
+btemp5.obj      temp            70       70        6      70     1
+btemp6.obj      temp            70       70        7      70     1
+codeptr.obj     
+powerup.obj     powerup          0        0        4       0     0
+stringtab.obj   stringtab        8        8       16       8     0
+		code_ptr        25       25        2      20     1
+wdiv.obj        float_tex      7C6      7C6       3A     F62     0
+		temp            70       70        7      70     1
+wmul.obj        temp            70       70        6      70     1
+		text           64B      64B       15     C96     0
+
+COMMON          rbss_0          20       20        5      20     1
+
+TOTAL		Name          Link     Load   Length
+	CLASS	BANK0    
+		rbss_0          20       20        5
+		temp            70       70        7
+		code_ptr        25       25        2
+
+	CLASS	BANK1    
+
+	CLASS	BANK2    
+
+	CLASS	BANK3    
+
+	CLASS	COMBANK  
+
+	CLASS	CODE     
+		powerup          0        0        4
+		float_tex      7B1      7B1       4F
+		end_init         4        4        4
+		text12         685      685       31
+		text8          6B6      6B6       74
+		text5          660      660       25
+		text1          72A      72A       87
+		text           64B      64B       15
+
+	CLASS	CONST    
+
+	CLASS	EEDATA   
+
+	CLASS	ENTRY    
+		stringtab        8        8       16
+
+	CLASS	STRING   
+
+	CLASS	IDLOC    
+
+	CLASS	CONFIG   
+
+
+
+SEGMENTS	Name		Load	Length	 Top	Selector    Space Class
+
+		powerup         000000	000004	000004	       0       0  CODE    
+		intentry        000004	00001A	00001E	       8       0  CODE    
+		rbit_0          000020	000007	000027	      20       1  BANK0   
+		temp            000070	000007	000077	      70       1  COMBANK 
+		text            00064B	000015	000660	     C96       0  CODE    
+		text5           000660	000025	000685	     CC0       0  CODE    
+		text12          000685	000031	0006B6	     D0A       0  CODE    
+		text8           0006B6	000074	00072A	     D6C       0  CODE    
+		text1           00072A	000087	0007B1	     E54       0  CODE    
+		float_text1     0007B1	00004F	000800	     F62       0  CODE    
+
+
+UNUSED ADDRESS RANGES
+
+	BANK0            0027-006F
+	                 0077-007F
+	BANK1            00A0-00EF
+	BANK2            0110-016F
+	BANK3            0190-01EF
+	CODE             001E-064A
+	                 0800-1FFF
+	COMBANK          0077-007F
+	CONST            001E-064A
+	                 0800-1FFF
+	EEDATA           2100-21FF
+
+                                  Symbol Table
+
+?_LCD_GOTO        rbss_0      0020  ?_LCD_PUTS        rbss_0      0020
+?_LCD_PUTSN       rbss_0      0020  ?_LCD_PUTUN       rbss_0      0020
+?a_DelayMs        rbss_0      0020  ?a_LCD_CMD        rbss_0      0020
+?a_LCD_GOTO       rbss_0      0020  ?a_LCD_INIT       rbss_0      0020
+?a_LCD_NIBBLE_OUT rbss_0      0020  ?a_LCD_PUTCH      rbss_0      0020
+?a_LCD_PUTUN      rbss_0      0020  ?a_LCD_STROBE     rbss_0      0020
+?a_LCD_WRITE      rbss_0      0020  ?a_main           rbss_0      0020
+_DelayMs          text1       077D  _LCD_CLEAR        text1       078A
+_LCD_CMD          text1       075A  _LCD_GOTO         text5       0660
+_LCD_INIT         text1       0790  _LCD_NIBBLE_OUT   text1       0732
+_LCD_PUTCH        text1       075E  _LCD_PUTS         text1       0762
+_LCD_PUTSN        text8       070E  _LCD_PUTUN        text8       06B6
+_LCD_STROBE       text1       072A  _LCD_WRITE        text1       0749
+__Bnvbit_0        nvbit_0     0025  __Bnvbit_1        nvbit_1     00A0
+__Bnvbit_2        nvbit_2     0110  __Bnvbit_3        nvbit_3     0190
+__Brbit_0         rbit_0      0020  __Brbit_1         rbit_1      00A0
+__Brbit_2         rbit_2      0110  __Brbit_3         rbit_3      0190
+__H__Z49231UD_    __Z49231UD_ 0190  __Hclrtext        clrtext     0008
+__Hcode           code        0190  __Hcode_ptr       code_ptr    0027
+__Hcommon_ram     common_ram  0190  __Hconfig         config      2007
+__Heeprom_data    eeprom_data 2100  __Hend_init       end_init    0008
+__Hfloat_text0    float_text0 001E  __Hfloat_text1    float_text1 0800
+__Hfloat_text2    float_text2 001E  __Hfloat_text3    float_text3 001E
+__Hfloat_text4    float_text4 001E  __Hidata_0        idata_0     001E
+__Hidata_1        idata_1     001E  __Hidata_2        idata_2     001E
+__Hidata_3        idata_3     001E  __Hidloc          idloc       2000
+__Hinit           init        0004  __Hinit23         init23      0004
+__Hintcode        intcode     0004  __Hintentry       intentry    0004
+__Hintret         intret      0004  __Hintsave        intsave     0190
+__Hintsave_0      intsave_0   0190  __Hintsave_1      intsave_1   0190
+__Hintsave_2      intsave_2   0190  __Hintsave_3      intsave_3   0190
+__Hnvbit_0        nvbit_0     0128  __Hnvbit_1        nvbit_1     0500
+__Hnvbit_2        nvbit_2     0880  __Hnvbit_3        nvbit_3     0C80
+__Hnvram          nvram       0025  __Hnvram_1        nvram_1     00A0
+__Hnvram_2        nvram_2     0110  __Hnvram_3        nvram_3     0190
+__Hpowerup        powerup     0004  __Hpstrings       pstrings    001E
+__Hrbit_0         rbit_0      0100  __Hrbit_1         rbit_1      0500
+__Hrbit_2         rbit_2      0880  __Hrbit_3         rbit_3      0C80
+__Hrbss_0         rbss_0      0025  __Hrbss_1         rbss_1      00A0
+__Hrbss_2         rbss_2      0110  __Hrbss_3         rbss_3      0190
+__Hrdata_0        rdata_0     0025  __Hrdata_1        rdata_1     00A0
+__Hrdata_2        rdata_2     0110  __Hrdata_3        rdata_3     0190
+__Hstrings        strings     001E  __Hstringtable    stringtable 001E
+__Hstruct         struct      0027  __Htemp           temp        0077
+__Htext           text        0190  __Hvectors        vectors     001E
+__L__Z49231UD_    __Z49231UD_ 0190  __Lclrtext        clrtext     0008
+__Lcode           code        0190  __Lcode_ptr       code_ptr    0025
+__Lcommon_ram     common_ram  0190  __Lconfig         config      2007
+__Leeprom_data    eeprom_data 2100  __Lend_init       end_init    0004
+__Lfloat_text0    float_text0 001E  __Lfloat_text1    float_text1 07B1
+__Lfloat_text2    float_text2 001E  __Lfloat_text3    float_text3 001E
+__Lfloat_text4    float_text4 001E  __Lidata_0        idata_0     001E
+__Lidata_1        idata_1     001E  __Lidata_2        idata_2     001E
+__Lidata_3        idata_3     001E  __Lidloc          idloc       2000
+__Linit           init        0004  __Linit23         init23      0004
+__Lintcode        intcode     0004  __Lintentry       intentry    0004
+__Lintret         intret      0004  __Lintsave        intsave     0190
+__Lintsave_0      intsave_0   0190  __Lintsave_1      intsave_1   0190
+__Lintsave_2      intsave_2   0190  __Lintsave_3      intsave_3   0190
+__Lnvbit_0        nvbit_0     0128  __Lnvbit_1        nvbit_1     0500
+__Lnvbit_2        nvbit_2     0880  __Lnvbit_3        nvbit_3     0C80
+__Lnvram          nvram       0025  __Lnvram_1        nvram_1     00A0
+__Lnvram_2        nvram_2     0110  __Lnvram_3        nvram_3     0190
+__Lpowerup        powerup     0000  __Lpstrings       pstrings    001E
+__Lrbit_0         rbit_0      0100  __Lrbit_1         rbit_1      0500
+__Lrbit_2         rbit_2      0880  __Lrbit_3         rbit_3      0C80
+__Lrbss_0         rbss_0      0020  __Lrbss_1         rbss_1      00A0
+__Lrbss_2         rbss_2      0110  __Lrbss_3         rbss_3      0190
+__Lrdata_0        rdata_0     0025  __Lrdata_1        rdata_1     00A0
+__Lrdata_2        rdata_2     0110  __Lrdata_3        rdata_3     0190
+__Lstrings        strings     001E  __Lstringtable    stringtable 0008
+__Lstruct         struct      0027  __Ltemp           temp        0070
+__Ltext           text        0190  __Lvectors        vectors     001E
+__S0              (abs)       2100  __S1              (abs)       0190
+_exit             init        0004  _main             text12      0685
+awdiv             float_text1 07B1  awmod             float_text1 07B1
+awmul             text        064B  code_ptr          code_ptr    0025
+dowdiv            float_text1 07C7  intlevel0         intentry    0004
+intlevel1         intentry    0004  lwdiv             float_text1 07C6
+lwmod             float_text1 07C6  lwmul             text        064B
+powerup           powerup     0000  start             init        0004
+string_indir      stringtable 000B  string_table      stringtable 0008
+used_btemp0       (abs)       0001  used_btemp1       (abs)       0001
+used_btemp2       (abs)       0001  used_btemp3       (abs)       0001
+used_btemp4       (abs)       0001  used_btemp5       (abs)       0001
+used_btemp6       (abs)       0001  used_code_ptr     (abs)       0001

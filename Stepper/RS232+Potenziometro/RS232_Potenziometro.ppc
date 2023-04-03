@@ -1,0 +1,16 @@
+[DeviceName]
+Value=P16F876A
+[DeviceClock]
+Value=20
+[MainUnit]
+Value=
+[DeviceFlags]
+Count=0
+[ProjectFiles]
+Count=1
+Value0=RS232_Potenziometro.c
+[SearchPath]
+Count=3
+Value0=C:\mikroC\Defs\
+Value1=C:\mikroC\Uses\p16\
+Value2=D:\pic\Stepper\RS232+Potenziometro\

@@ -1,0 +1,19 @@
+[DeviceName]
+Value=P16F876A
+[DeviceClock]
+Value=20
+[MainUnit]
+Value=DisplayLCD.c
+[DeviceFlags]
+Count=3
+Value0=_LVP_OFF = $3F7F
+Value1=_WDT_OFF = $3FFB
+Value2=_HS_OSC = $3FFE
+[ProjectFiles]
+Count=1
+Value0=DisplayLCD.c
+[SearchPath]
+Count=3
+Value0=C:\MicroC\Defs\
+Value1=C:\MicroC\Uses\p16\
+Value2=D:\pic\Hitachi\

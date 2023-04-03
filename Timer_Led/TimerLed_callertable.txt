@@ -1,0 +1,13 @@
+interrupt
+main
+	Salva_Sec
+		Div_16x16_S
+			Div_16x16_S_L
+		EEprom_write
+	DisplayNum
+		Div_16x16_U
+	Abilita_Timer
+	Enable_Output
+	Carica_Sec
+		EEprom_read
+	InitMCU

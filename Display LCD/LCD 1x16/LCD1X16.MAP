@@ -1,0 +1,273 @@
+Linker command line:
+
+-z -h+D:\PIC\LCD1X1~1\LCD1X16.SYM -mD:\PIC\LCD1X1~1\LCD1X16.MAP \
+  -ppowerup=00h,intentry=04h,intcode,intret,init,end_init,clrtext,stringtable,pstrings,strings \
+  -pintsave_0=0Ch -ABANK0=0Ch-04Fh \
+  -prbit_0=BANK0,rbss_0=BANK0,rdata_0=BANK0,idata_0=CODE -ACOMBANK=0Ch-04Fh \
+  -ptemp=COMBANK -ACODE=0-03FFh -ACONST=0-0FFhx4 -pconfig=2007h \
+  -pidloc=2000h -AEEDATA=2100h-21FFh -peeprom_data=EEDATA \
+  -pfloat_text0=CODE,float_text1=CODE,float_text2=CODE \
+  -pfloat_text3=CODE,float_text4=CODE -pnvram=BANK0,nvram_1=BANK1 \
+  -pnvbit_0=BANK0,nvbit_1=BANK1 -Q16F84A -oC:\WINDOWS\TEMP\L.OBJ \
+  D:\PICCLITE\LIB\PCLRT40A.OBJ LCD1X16.OBJ D:\PICCLITE\LIB\PCL40A-C.LIB 
+
+Object code version is 3.7
+
+Machine type is 16F84A
+
+Call graph:
+
+*_main size 0,0 offset 0
+     _strcpy size 2,2 offset 0
+         string_table
+     _DelayMs size 0,3 offset 1
+     _LCD_INIT size 0,1 offset 0
+         _DelayMs size 0,3 offset 1
+         _LCD_STROBE size 0,1 offset 6
+         _LCD_WRITE size 0,2 offset 3
+             _LCD_NIBBLE_OUT size 0,1 offset 5
+                 _LCD_STROBE size 0,1 offset 6
+     _LCD_CLEAR size 0,0 offset 0
+         _LCD_CMD size 0,1 offset 2
+             _LCD_WRITE size 0,2 offset 3
+                 _LCD_NIBBLE_OUT size 0,1 offset 5
+                     _LCD_STROBE size 0,1 offset 6
+         _DelayMs size 0,3 offset 1
+*    _LCD_GOTO size 1,1 offset 0
+*        _LCD_CMD size 0,1 offset 2
+*            _LCD_WRITE size 0,2 offset 3
+*                _LCD_NIBBLE_OUT size 0,1 offset 5
+*                    _LCD_STROBE size 0,1 offset 6
+     _LCD_PUTS size 2,0 offset 0
+         _LCD_WRITE size 0,2 offset 3
+             _LCD_NIBBLE_OUT size 0,1 offset 5
+                 _LCD_STROBE size 0,1 offset 6
+         string_table
+     _r_shift size 0,5 offset 0
+     _l_shift size 0,5 offset 0
+
+		Name          Link     Load   Length Selector Space Scale
+D:\PICCLITE\LIB\PCLRT40A.OBJ
+		end_init         8        8        2       8     0
+LCD1X16.OBJ     strings         24       24       12       8     0
+		rbss_0           C        C       10       C     1
+		temp            23       23        6      23     1
+		text11         28A      28A       24     514     0
+		text12         32D      32D       4B     65A     0
+		text9          23B      23B       18     476     0
+		text10         1FD      1FD       14     3FA     0
+		text13         2E7      2E7       46     5CE     0
+		text14         2AE      2AE       39     55C     0
+		text8          378      378       4E     6F0     0
+		text1          1DA      1DA        8     3B4     0
+		text2          253      253       18     4A6     0
+		text0          1E2      1E2        D     3C4     0
+		text3          1EF      1EF        E     3DE     0
+		text6          1D5      1D5        5     3AA     0
+		text7          1CB      1CB        5     396     0
+		text4          1D0      1D0        5     3A0     0
+		text5          26B      26B       1F     4D6     0
+
+D:\PICCLITE\LIB\PCL40A-C.LIB
+strcpy.obj      temp            23       23        1      23     1
+		text0          211      211       15     422     0
+btemp0.obj      temp            23       23        1      23     1
+btemp1.obj      temp            23       23        2      23     1
+btemp2.obj      temp            23       23        3      23     1
+btemp3.obj      temp            23       23        4      23     1
+btemp4.obj      temp            23       23        5      23     1
+btemp5.obj      temp            23       23        6      23     1
+btemp6.obj      temp            23       23        7      23     1
+clrbank0.obj    init             4        4        4       8     0
+clr.obj         clrtext          A        A        7       8     0
+codeptr.obj     
+powerup.obj     powerup          0        0        4       0     0
+stringtab.obj   stringtab       11       11       13       8     0
+		code_ptr        2A       2A        2      2A     1
+wdiv.obj        float_tex      3C6      3C6       3A     78C     0
+		temp            23       23        7      23     1
+wmul.obj        temp            23       23        6      23     1
+		text           226      226       15     44C     0
+
+COMMON          rbss_0          1C       1C        7       C     1
+
+TOTAL		Name          Link     Load   Length
+	CLASS	BANK0    
+		rbss_0           C        C       17
+		temp            23       23        7
+		code_ptr        2A       2A        2
+
+	CLASS	COMBANK  
+
+	CLASS	CODE     
+		powerup          0        0        4
+		float_tex      3C6      3C6       3A
+		clrtext          A        A        7
+		end_init         8        8        2
+		init             4        4        4
+		text11         28A      28A       24
+		text12         32D      32D       4B
+		text9          23B      23B       18
+		text10         1FD      1FD       14
+		text13         2E7      2E7       46
+		text14         2AE      2AE       39
+		text8          378      378       4E
+		text1          1DA      1DA        8
+		text2          253      253       18
+		text0          1E2      1E2        D
+		text3          1EF      1EF        E
+		text6          1D5      1D5        5
+		text7          1CB      1CB        5
+		text4          1D0      1D0        5
+		text5          26B      26B       1F
+		text0          211      211       15
+		text           226      226       15
+
+	CLASS	CONST    
+
+	CLASS	EEDATA   
+
+	CLASS	ENTRY    
+		stringtab       11       11       13
+
+	CLASS	BANK3    
+
+	CLASS	BANK2    
+
+	CLASS	BANK1    
+
+	CLASS	STRING   
+		strings         24       24       12
+
+	CLASS	IDLOC    
+
+	CLASS	CONFIG   
+
+
+
+SEGMENTS	Name		Load	Length	 Top	Selector    Space Class
+
+		powerup         000000	000004	000004	       0       0  CODE    
+		intentry        000004	000032	000036	       8       0  CODE    
+		intsave_0       00000C	000017	000023	       C       1  BANK0   
+		temp            000023	000007	00002A	      23       1  COMBANK 
+		nvram           00002A	000002	00002C	      2A       1  BANK0   
+		text7           0001CB	000005	0001D0	     396       0  CODE    
+		text4           0001D0	000005	0001D5	     3A0       0  CODE    
+		text6           0001D5	000005	0001DA	     3AA       0  CODE    
+		text1           0001DA	000008	0001E2	     3B4       0  CODE    
+		text0           0001E2	00000D	0001EF	     3C4       0  CODE    
+		text3           0001EF	00000E	0001FD	     3DE       0  CODE    
+		text10          0001FD	000014	000211	     3FA       0  CODE    
+		text0           000211	000015	000226	     422       0  CODE    
+		text            000226	000015	00023B	     44C       0  CODE    
+		text9           00023B	000018	000253	     476       0  CODE    
+		text2           000253	000018	00026B	     4A6       0  CODE    
+		text5           00026B	00001F	00028A	     4D6       0  CODE    
+		text11          00028A	000024	0002AE	     514       0  CODE    
+		text14          0002AE	000039	0002E7	     55C       0  CODE    
+		text13          0002E7	000046	00032D	     5CE       0  CODE    
+		text12          00032D	00004B	000378	     65A       0  CODE    
+		text8           000378	00004E	0003C6	     6F0       0  CODE    
+		float_text1     0003C6	00003A	000400	     78C       0  CODE    
+
+
+UNUSED ADDRESS RANGES
+
+	BANK0            002C-004F
+	CODE             0036-01CA
+	COMBANK          002C-004F
+	CONST            0036-01CA
+	EEDATA           2100-21FF
+
+                                  Symbol Table
+
+?_LCD_GOTO        rbss_0      001C  ?_LCD_PUTS        rbss_0      001C
+?_LCD_PUTSN       rbss_0      001C  ?_LCD_PUTUN       rbss_0      001C
+?_strcpy          rbss_0      001C  ?a_DelayMs        rbss_0      001D
+?a_LCD_CMD        rbss_0      001E  ?a_LCD_GOTO       rbss_0      001D
+?a_LCD_INIT       rbss_0      001C  ?a_LCD_NIBBLE_OUT rbss_0      0021
+?a_LCD_PUTCH      rbss_0      001C  ?a_LCD_PUTUN      rbss_0      001C
+?a_LCD_STROBE     rbss_0      0022  ?a_LCD_WRITE      rbss_0      001F
+?a_l_shift        rbss_0      001C  ?a_r_shift        rbss_0      001C
+?a_strcpy         rbss_0      001E  _DelayMs          text0       01E2
+_LCD_CLEAR        text6       01D5  _LCD_CMD          text4       01D0
+_LCD_GOTO         text5       026B  _LCD_INIT         text11      028A
+_LCD_NIBBLE_OUT   text2       0253  _LCD_PUTCH        text7       01CB
+_LCD_PUTS         text10      01FD  _LCD_PUTSN        text9       023B
+_LCD_PUTUN        text8       0378  _LCD_STROBE       text1       01DA
+_LCD_WRITE        text3       01EF  __Bnvbit_0        nvbit_0     002A
+__Bnvbit_1        nvbit_1     002A  __Bnvbit_2        nvbit_2     002A
+__Bnvbit_3        nvbit_3     002A  __Brbit_0         rbit_0      000C
+__Brbit_1         rbit_1      002A  __Brbit_2         rbit_2      002A
+__Brbit_3         rbit_3      002A  __Hclrtext        clrtext     0011
+__Hcode           code        002A  __Hcode_ptr       code_ptr    002C
+__Hcommon_ram     common_ram  002A  __Hconfig         config      2007
+__Heeprom_data    eeprom_data 2100  __Hend_init       end_init    000A
+__Hfloat_text0    float_text0 0036  __Hfloat_text1    float_text1 0400
+__Hfloat_text2    float_text2 0036  __Hfloat_text3    float_text3 0036
+__Hfloat_text4    float_text4 0036  __Hidata_0        idata_0     0036
+__Hidata_1        idata_1     002A  __Hidata_2        idata_2     002A
+__Hidata_3        idata_3     002A  __Hidloc          idloc       2000
+__Hinit           init        0008  __Hinit23         init23      002A
+__Hintcode        intcode     0004  __Hintentry       intentry    0004
+__Hintret         intret      0004  __Hintsave        intsave     002A
+__Hintsave_0      intsave_0   000C  __Hintsave_1      intsave_1   002A
+__Hintsave_2      intsave_2   002A  __Hintsave_3      intsave_3   002A
+__Hnvbit_0        nvbit_0     0150  __Hnvbit_1        nvbit_1     0150
+__Hnvbit_2        nvbit_2     0150  __Hnvbit_3        nvbit_3     0150
+__Hnvram          nvram       002A  __Hnvram_1        nvram_1     002A
+__Hnvram_2        nvram_2     002A  __Hnvram_3        nvram_3     002A
+__Hpowerup        powerup     0004  __Hpstrings       pstrings    0024
+__Hrbit_0         rbit_0      0060  __Hrbit_1         rbit_1      0150
+__Hrbit_2         rbit_2      0150  __Hrbit_3         rbit_3      0150
+__Hrbss_0         rbss_0      0023  __Hrbss_1         rbss_1      002A
+__Hrbss_2         rbss_2      002A  __Hrbss_3         rbss_3      002A
+__Hrdata_0        rdata_0     0023  __Hrdata_1        rdata_1     002A
+__Hrdata_2        rdata_2     002A  __Hrdata_3        rdata_3     002A
+__Hstrings        strings     0036  __Hstringtable    stringtable 0024
+__Hstruct         struct      002C  __Htemp           temp        002A
+__Htext           text        002A  __Hvectors        vectors     0036
+__Lclrtext        clrtext     000A  __Lcode           code        002A
+__Lcode_ptr       code_ptr    002A  __Lcommon_ram     common_ram  002A
+__Lconfig         config      2007  __Leeprom_data    eeprom_data 2100
+__Lend_init       end_init    0008  __Lfloat_text0    float_text0 0036
+__Lfloat_text1    float_text1 03C6  __Lfloat_text2    float_text2 0036
+__Lfloat_text3    float_text3 0036  __Lfloat_text4    float_text4 0036
+__Lidata_0        idata_0     0036  __Lidata_1        idata_1     002A
+__Lidata_2        idata_2     002A  __Lidata_3        idata_3     002A
+__Lidloc          idloc       2000  __Linit           init        0004
+__Linit23         init23      002A  __Lintcode        intcode     0004
+__Lintentry       intentry    0004  __Lintret         intret      0004
+__Lintsave        intsave     002A  __Lintsave_0      intsave_0   000C
+__Lintsave_1      intsave_1   002A  __Lintsave_2      intsave_2   002A
+__Lintsave_3      intsave_3   002A  __Lnvbit_0        nvbit_0     0150
+__Lnvbit_1        nvbit_1     0150  __Lnvbit_2        nvbit_2     0150
+__Lnvbit_3        nvbit_3     0150  __Lnvram          nvram       002A
+__Lnvram_1        nvram_1     002A  __Lnvram_2        nvram_2     002A
+__Lnvram_3        nvram_3     002A  __Lpowerup        powerup     0000
+__Lpstrings       pstrings    0024  __Lrbit_0         rbit_0      0060
+__Lrbit_1         rbit_1      0150  __Lrbit_2         rbit_2      0150
+__Lrbit_3         rbit_3      0150  __Lrbss_0         rbss_0      000C
+__Lrbss_1         rbss_1      002A  __Lrbss_2         rbss_2      002A
+__Lrbss_3         rbss_3      002A  __Lrdata_0        rdata_0     0023
+__Lrdata_1        rdata_1     002A  __Lrdata_2        rdata_2     002A
+__Lrdata_3        rdata_3     002A  __Lstrings        strings     0024
+__Lstringtable    stringtable 0011  __Lstruct         struct      002C
+__Ltemp           temp        0023  __Ltext           text        002A
+__Lvectors        vectors     0036  __S0              (abs)       2100
+__S1              (abs)       002C  _exit             init        0004
+_l_shift          text12      032D  _main             text14      02AE
+_r_shift          text13      02E7  _str1             rbss_0      000C
+_str2             rbss_0      0014  _strcpy           text0       0211
+awmul             text        0226  clear_bank0       init        0004
+clear_ram         clrtext     000D  code_ptr          code_ptr    002A
+dowdiv            float_text1 03C7  intlevel0         intentry    0004
+intlevel1         intentry    0004  lwdiv             float_text1 03C6
+lwmod             float_text1 03C6  lwmul             text        0226
+powerup           powerup     0000  start             init        0004
+string_indir      stringtable 0013  string_table      stringtable 0011
+used_btemp0       (abs)       0001  used_btemp1       (abs)       0001
+used_btemp2       (abs)       0001  used_btemp3       (abs)       0001
+used_btemp4       (abs)       0001  used_btemp5       (abs)       0001
+used_btemp6       (abs)       0001  used_code_ptr     (abs)       0001

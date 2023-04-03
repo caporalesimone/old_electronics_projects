@@ -1,0 +1,22 @@
+struct MenuItem { 
+  char text[20]; 
+  int num; 
+  int type; 
+}; 
+
+const struct MenuItem MyMenu0 = { "Text Goes Here", 5, 5 }; 
+char lcdptr[20]; 
+
+char* strcpy2(char * to, const char * from) { 
+   char * cp; 
+
+   cp = to; 
+   while(*cp++ = *from++) 
+      continue; 
+   return to; 
+}//~ 
+
+void main() { 
+  strcpy2(lcdptr, MyMenu0.text);    // must do this every time you 
+  LCD_Out(1,1,lcdptr);              //   wish to use the Lcd_Out() 
+}

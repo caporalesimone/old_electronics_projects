@@ -1,0 +1,74 @@
+
+#include <pic1687x.h>
+#include <stdio.h>
+#define  XTAL_FREQ 4MHZ
+#include "delay.c"
+#include "lcd.c"
+
+
+#define NCAMPIONI 10 // Campioni al secondo della temperatura
+
+main()
+{
+  int valore; 
+//  float valore1;
+//  float mediatemp;
+ // int i;
+
+
+  TRISB=0;
+  PORTB=0;
+  TRISC=0;        //PORTC tutte uscite
+  PORTC=0;        //PORTC tutte a 0
+
+
+  INTCON=0;       //pulisce interrupt
+  CCP1CON=0;      //pulisce modulo CCP1 (PORTC2)
+       
+  T2CON=4;        //Timer2 acceso con prescaler a 1
+  CCP1CON=12;     //Modulo CCP1 settato in modalita' PWM
+
+  PR2=0xFE;       //Step massimo del duty cycle (e frequenza)
+        
+  ADCON0 = 0b11000001;                  //abilita AD
+  ADCON1 = 0b10000000;  
+       
+  //mediatemp=0;
+                     
+  for(;;) 
+  {
+    //for (i=0;i<NCAMPIONI;i++)
+    //{
+ 
+                	    
+      ADGO = 1;       //Fa partire la conversione
+      while(ADGO)
+        continue;     //Attende la conversione
+
+      valore = ADRESL+(ADRESH<<8);    //Risultato acquisizione in valore
+
+      //mediatemp = mediatemp + (float)((valore/2.0)-273.15)*10;   
+
+      CCPR1L=valore/4;
+      
+    //}      
+  
+    /*valore1 = mediatemp/NCAMPIONI;          
+
+
+    if(valore1>197)
+    {
+      RC1=1;  // Abilita una uscita per attivare qualcosa
+    }
+    else
+    {
+      if(valore1<191)
+        RC1=0;
+    }
+
+    DelayMs(250);
+    mediatemp=0;
+    */  
+  }
+    
+}

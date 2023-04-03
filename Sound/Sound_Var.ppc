@@ -1,0 +1,35 @@
+[DeviceName]
+Value=P16F876A
+[DeviceClock]
+Value=20
+[MainUnit]
+Value=Sound_Var.c
+[DeviceFlags]
+Count=3
+Value0=_LVP_OFF = $3F7F
+Value1=_WDT_OFF = $3FFB
+Value2=_HS_OSC = $3FFE
+Value3=_LVP_OFF = $3F7F
+Value4=_WDT_OFF = $3FFB
+Value5=_HS_OSC = $3FFE
+[ProjectFiles]
+Count=1
+Value0=Sound_Var.c
+[SearchPath]
+Count=6
+Value0=C:\mikroC\Defs\
+Value1=C:\mikroC\Uses\p16\
+Value2=D:\pic\Sound\
+Value3=C:\Program Files\Mikroelektronika\5000\mikroC\Examples\extra_examples_srdjan\Sound_Var\P16\
+Value4=c:\Program Files\Mikroelektronika\5000\mikroC\Defs\
+Value5=c:\Program Files\Mikroelektronika\5000\mikroC\Uses\p16\
+[EEPROMinfo]
+isused=0
+[ObjLibFiles]
+Count=0
+[IncludePath]
+Count=0
+[BuildType]
+bType=0
+[HeaderFiles]
+Count=0

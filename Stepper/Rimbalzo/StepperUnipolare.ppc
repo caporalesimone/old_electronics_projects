@@ -1,0 +1,18 @@
+[DeviceName]
+Value=P16F84A
+[DeviceClock]
+Value=4
+[MainUnit]
+Value=StepperUnipolare.c
+[DeviceFlags]
+Count=1
+Value0=_XT_OSC = $3FFD
+[ProjectFiles]
+Count=1
+Value0=StepperUnipolare.c
+[SearchPath]
+Count=4
+Value0=C:\mikroC\Defs\
+Value1=C:\mikroC\Uses\p16\
+Value2=D:\pic\Stepper\Rimbalzo\
+Value3=D:\pic\Stepper\

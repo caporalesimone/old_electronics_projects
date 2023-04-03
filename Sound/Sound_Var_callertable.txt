@@ -1,0 +1,22 @@
+main
+	Melody2
+		ToneE
+			Sound_Play
+				Delay_Cyc
+		ToneC
+			Sound_Play
+				Delay_Cyc
+		ToneA
+			Sound_Play
+				Delay_Cyc
+	Melody
+		Tone3
+			Sound_Play
+				Delay_Cyc
+		Tone2
+			Sound_Play
+				Delay_Cyc
+		Tone1
+			Sound_Play
+				Delay_Cyc
+	Sound_Init

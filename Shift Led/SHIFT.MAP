@@ -1,0 +1,152 @@
+Linker command line:
+
+-z -h+D:\PIC\SHIFTL~1\SHIFT.SYM -mD:\PIC\SHIFTL~1\SHIFT.MAP \
+  -ppowerup=00h,intentry=04h,intcode,intret,init,end_init,clrtext,stringtable,pstrings,strings \
+  -pintsave_0=0Ch -ABANK0=0Ch-04Fh \
+  -prbit_0=BANK0,rbss_0=BANK0,rdata_0=BANK0,idata_0=CODE -ACOMBANK=0Ch-04Fh \
+  -ptemp=COMBANK -ACODE=0-03FFh -ACONST=0-0FFhx4 -pconfig=2007h \
+  -pidloc=2000h -AEEDATA=2100h-21FFh -peeprom_data=EEDATA \
+  -pfloat_text0=CODE,float_text1=CODE,float_text2=CODE \
+  -pfloat_text3=CODE,float_text4=CODE -pnvram=BANK0,nvram_1=BANK1 \
+  -pnvbit_0=BANK0,nvbit_1=BANK1 -Q16F84A -oC:\WINDOWS\TEMP\L.OBJ \
+  D:\PICCLITE\LIB\PCLRT40A.OBJ SHIFT.OBJ D:\PICCLITE\LIB\PCL40A-C.LIB 
+
+Object code version is 3.7
+
+Machine type is 16F84A
+
+Call graph:
+
+*_main size 0,4 offset 0
+*    _DelayMs size 0,3 offset 4
+
+		Name          Link     Load   Length Selector Space Scale
+D:\PICCLITE\LIB\PCLRT40A.OBJ
+		end_init         4        4        2       8     0
+SHIFT.OBJ       temp            13       13        1      13     1
+		text1          3D7      3D7       29     7AE     0
+		text0          3CA      3CA        D     794     0
+
+D:\PICCLITE\LIB\PCL40A-C.LIB
+btemp0.obj      temp            13       13        1      13     1
+powerup.obj     powerup          0        0        4       0     0
+
+COMMON          rbss_0           C        C        7       C     1
+
+TOTAL		Name          Link     Load   Length
+	CLASS	BANK0    
+		rbss_0           C        C        7
+		temp            13       13        1
+
+	CLASS	COMBANK  
+
+	CLASS	CODE     
+		powerup          0        0        4
+		end_init         4        4        2
+		text1          3D7      3D7       29
+		text0          3CA      3CA        D
+
+	CLASS	CONST    
+
+	CLASS	EEDATA   
+
+	CLASS	ENTRY    
+
+	CLASS	BANK3    
+
+	CLASS	BANK2    
+
+	CLASS	BANK1    
+
+	CLASS	STRING   
+
+	CLASS	IDLOC    
+
+	CLASS	CONFIG   
+
+
+
+SEGMENTS	Name		Load	Length	 Top	Selector    Space Class
+
+		powerup         000000	000004	000004	       0       0  CODE    
+		intentry        000004	000002	000006	       8       0  CODE    
+		intsave_0       00000C	000007	000013	       C       1  BANK0   
+		temp            000013	000001	000014	      13       1  COMBANK 
+		text0           0003CA	00000D	0003D7	     794       0  CODE    
+		text1           0003D7	000029	000400	     7AE       0  CODE    
+
+
+UNUSED ADDRESS RANGES
+
+	BANK0            0014-004F
+	CODE             0006-03C9
+	COMBANK          0014-004F
+	CONST            0006-03C9
+	EEDATA           2100-21FF
+
+                                  Symbol Table
+
+?a_DelayMs     rbss_0      0010  ?a_main        rbss_0      000C
+_DelayMs       text0       03CA  __Bnvbit_0     nvbit_0     0014
+__Bnvbit_1     nvbit_1     0014  __Bnvbit_2     nvbit_2     0014
+__Bnvbit_3     nvbit_3     0014  __Brbit_0      rbit_0      000C
+__Brbit_1      rbit_1      0014  __Brbit_2      rbit_2      0014
+__Brbit_3      rbit_3      0014  __Hclrtext     clrtext     0006
+__Hcode        code        0014  __Hcommon_ram  common_ram  0014
+__Hconfig      config      2007  __Heeprom_data eeprom_data 2100
+__Hend_init    end_init    0006  __Hfloat_text0 float_text0 0006
+__Hfloat_text1 float_text1 0006  __Hfloat_text2 float_text2 0006
+__Hfloat_text3 float_text3 0006  __Hfloat_text4 float_text4 0006
+__Hidata_0     idata_0     0006  __Hidata_1     idata_1     0014
+__Hidata_2     idata_2     0014  __Hidata_3     idata_3     0014
+__Hidloc       idloc       2000  __Hinit        init        0004
+__Hinit23      init23      0014  __Hintcode     intcode     0004
+__Hintentry    intentry    0004  __Hintret      intret      0004
+__Hintsave     intsave     0014  __Hintsave_0   intsave_0   000C
+__Hintsave_1   intsave_1   0014  __Hintsave_2   intsave_2   0014
+__Hintsave_3   intsave_3   0014  __Hnvbit_0     nvbit_0     00A0
+__Hnvbit_1     nvbit_1     00A0  __Hnvbit_2     nvbit_2     00A0
+__Hnvbit_3     nvbit_3     00A0  __Hnvram       nvram       0014
+__Hnvram_1     nvram_1     0014  __Hnvram_2     nvram_2     0014
+__Hnvram_3     nvram_3     0014  __Hpowerup     powerup     0004
+__Hpstrings    pstrings    0006  __Hrbit_0      rbit_0      0060
+__Hrbit_1      rbit_1      00A0  __Hrbit_2      rbit_2      00A0
+__Hrbit_3      rbit_3      00A0  __Hrbss_0      rbss_0      0013
+__Hrbss_1      rbss_1      0014  __Hrbss_2      rbss_2      0014
+__Hrbss_3      rbss_3      0014  __Hrdata_0     rdata_0     0013
+__Hrdata_1     rdata_1     0014  __Hrdata_2     rdata_2     0014
+__Hrdata_3     rdata_3     0014  __Hstrings     strings     0006
+__Hstringtable stringtable 0006  __Hstruct      struct      0014
+__Htemp        temp        0014  __Htext        text        0014
+__Hvectors     vectors     0006  __Lclrtext     clrtext     0006
+__Lcode        code        0014  __Lcommon_ram  common_ram  0014
+__Lconfig      config      2007  __Leeprom_data eeprom_data 2100
+__Lend_init    end_init    0004  __Lfloat_text0 float_text0 0006
+__Lfloat_text1 float_text1 0006  __Lfloat_text2 float_text2 0006
+__Lfloat_text3 float_text3 0006  __Lfloat_text4 float_text4 0006
+__Lidata_0     idata_0     0006  __Lidata_1     idata_1     0014
+__Lidata_2     idata_2     0014  __Lidata_3     idata_3     0014
+__Lidloc       idloc       2000  __Linit        init        0004
+__Linit23      init23      0014  __Lintcode     intcode     0004
+__Lintentry    intentry    0004  __Lintret      intret      0004
+__Lintsave     intsave     0014  __Lintsave_0   intsave_0   000C
+__Lintsave_1   intsave_1   0014  __Lintsave_2   intsave_2   0014
+__Lintsave_3   intsave_3   0014  __Lnvbit_0     nvbit_0     00A0
+__Lnvbit_1     nvbit_1     00A0  __Lnvbit_2     nvbit_2     00A0
+__Lnvbit_3     nvbit_3     00A0  __Lnvram       nvram       0014
+__Lnvram_1     nvram_1     0014  __Lnvram_2     nvram_2     0014
+__Lnvram_3     nvram_3     0014  __Lpowerup     powerup     0000
+__Lpstrings    pstrings    0006  __Lrbit_0      rbit_0      0060
+__Lrbit_1      rbit_1      00A0  __Lrbit_2      rbit_2      00A0
+__Lrbit_3      rbit_3      00A0  __Lrbss_0      rbss_0      000C
+__Lrbss_1      rbss_1      0014  __Lrbss_2      rbss_2      0014
+__Lrbss_3      rbss_3      0014  __Lrdata_0     rdata_0     0013
+__Lrdata_1     rdata_1     0014  __Lrdata_2     rdata_2     0014
+__Lrdata_3     rdata_3     0014  __Lstrings     strings     0006
+__Lstringtable stringtable 0006  __Lstruct      struct      0014
+__Ltemp        temp        0013  __Ltext        text        0014
+__Lvectors     vectors     0006  __S0           (abs)       2100
+__S1           (abs)       0014  _exit          init        0004
+_main          text1       03D7  intlevel0      intentry    0004
+intlevel1      intentry    0004  powerup        powerup     0000
+start          init        0004  used_btemp0    (abs)       0001

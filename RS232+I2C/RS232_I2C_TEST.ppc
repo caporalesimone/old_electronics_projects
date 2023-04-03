@@ -1,0 +1,17 @@
+[DeviceName]
+Value=P16F876A
+[DeviceClock]
+Value=20
+[MainUnit]
+Value=
+[DeviceFlags]
+Count=0
+[ProjectFiles]
+Count=1
+Value0=RS232_I2C_TEST.c
+[SearchPath]
+Count=4
+Value0=C:\MicroC\Defs\
+Value1=C:\MicroC\Uses\p16\
+Value2=D:\pic\RS232+I2C\
+Value3=D:\pic\RS232\

@@ -1,0 +1,27 @@
+[DeviceName]
+Value=P16F876A
+[DeviceClock]
+Value=20
+[MainUnit]
+Value=LCD_RS232.c
+[DeviceFlags]
+Count=1
+Value0=_HS_OSC = $3FFE
+[BuildType]
+bType=0
+[ProjectFiles]
+Count=1
+Value0=LCD_RS232.c
+[HeaderFiles]
+Count=0
+[ObjLibFiles]
+Count=0
+[EEPROMinfo]
+isused=0
+[SearchPath]
+Count=3
+Value0=C:\mikroC\Defs\
+Value1=C:\mikroC\Uses\p16\
+Value2=D:\PIC\LCD + RS232\
+[IncludePath]
+Count=0

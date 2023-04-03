@@ -1,0 +1,20 @@
+[DeviceName]
+Value=P16F84A
+[DeviceClock]
+Value=4
+[MainUnit]
+Value=Timer.c
+[DeviceFlags]
+Count=3
+Value0=_PWRTE_ON = $3FF7
+Value1=_WDT_OFF = $3FFB
+Value2=_HS_OSC = $3FFE
+[ProjectFiles]
+Count=1
+Value0=Timer.c
+[SearchPath]
+Count=3
+Value0=D:\pic\TimerBromografo\
+Value1=C:\MicroC\Defs\
+Value2=C:\MicroC\Uses\p16\
+Value3=D:\pic\TimerBromografo\

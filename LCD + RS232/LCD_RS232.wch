@@ -1,0 +1,15 @@
+[frmWatchValues]
+FormVersion=0
+WatchCount=0
+Column0=100
+Column1=80
+Column2=80
+ShowCmd=1
+Flags=0
+PixelsPerInch=96
+MinMaxPos(1024x768)=-1,-1,-1,-1
+MinMaxPos=-1,-1,-1,-1
+NormPos(1024x768)=22,22,416,547
+NormPos=22,22,416,547
+cbPeripheralFreez_Checked=TRUE
+

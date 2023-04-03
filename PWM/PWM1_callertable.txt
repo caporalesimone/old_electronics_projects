@@ -1,0 +1,13 @@
+main
+	Usart_Init
+	Usart_Read
+	Usart_Data_Ready
+	PWM2_Change_Duty
+		Mul_16x16_S
+	PWM2_Start
+	PWM1_Change_Duty
+		Mul_16x16_S
+	PWM1_Start
+	InitMain
+		PWM2_Init
+		PWM1_Init

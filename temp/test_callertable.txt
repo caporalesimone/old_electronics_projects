@@ -1,0 +1,7 @@
+main
+	make_delay
+		Div_16x16_U
+		VDelay_ms
+			Mul_32x32_U
+	Adc_Read
+		Delay_22us
