@@ -1,0 +1,10 @@
+void LCD_Out_const(char x, char y, const char *txt){
+char loc_text[__MAX_STRING_LENGTH];
+char * dst;
+
+  dst = loc_text;
+  while (*dst++ = *txt++)
+    ;
+
+  LCD_Out(x, y, loc_text);
+}

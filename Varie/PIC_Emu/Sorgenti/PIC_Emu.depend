@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1382706896 source:c:\users\caporale\google drive\programmazione\codeblocks\pic_emu\sorgenti\main.c
+	<stdio.h>
+	<stdlib.h>
+	"PIC16\PIC16.h"
+
+1383040672 c:\users\caporale\google drive\programmazione\codeblocks\pic_emu\sorgenti\pic16\pic16.h
+	<stdint.h>
+
+1383056566 source:c:\users\caporale\google drive\programmazione\codeblocks\pic_emu\sorgenti\pic16\pic16.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	"PIC16.h"
+
