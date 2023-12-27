@@ -1,5 +1,5 @@
 #line 1 "D:/PIC/TimerBromografo/Timer.c"
-#line 17 "D:/PIC/TimerBromografo/Timer.c"
+#line 21 "D:/PIC/TimerBromografo/Timer.c"
 unsigned char ucNumDisplay;
 int uiSecondi_Attuale;
 unsigned int uiSecondi_Fine;
@@ -8,24 +8,21 @@ unsigned char ucOutEnabled;
 unsigned int uiContTmp;
 
 
-void interrupt()
-{
+void interrupt() {
  uiContTmp++;
  TMR0 = 96;
  INTCON = 0x20;
 }
 
 
-void DisplayNum (void)
-{
+void DisplayNum (void) {
  unsigned char ucSecondi_Unita;
  unsigned char ucSecondi_Decine;
  unsigned char ucSecondi_Minuti;
  unsigned int uiSecondi;
 
 
- if (uiSecondi_Attuale > 0)
- {
+ if (uiSecondi_Attuale > 0) {
  uiSecondi = uiSecondi_Attuale;
 
  ucSecondi_Minuti = uiSecondi / 60;
@@ -60,8 +57,7 @@ void DisplayNum (void)
 }
 
 
-void main (void)
-{
+void main (void) {
  char cEsciLoop;
  unsigned int i;
  unsigned char j,k;
@@ -119,8 +115,8 @@ void main (void)
  uiSecondi_Attuale--;
  uiContTmp = 0;
 
- if (uiSecondi_Attuale < 120) uiMaxInterrupt = 180;
 
+ if (uiSecondi_Attuale < 120) uiMaxInterrupt = 180;
  }
 
 
@@ -160,8 +156,8 @@ void main (void)
  if (j >= 10) k = 5;
  if (j >= 60) k = 30;
 
- for (i=0;i<50;i++)
- {
+
+ for (i=0;i<50;i++) {
  DisplayNum();
  Delay_ms(1);
  }
@@ -170,8 +166,7 @@ void main (void)
  uiSecondi_Attuale = uiSecondi_Attuale + k;
  else uiSecondi_Attuale = 1;
 
- for (i=0;i<50;i++)
- {
+ for (i=0;i<50;i++) {
  DisplayNum();
  Delay_ms(1);
  }

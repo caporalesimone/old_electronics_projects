@@ -1,13 +1,17 @@
-/* Timer per il bromografo con PIC16F84A
+/*
+
+   Timer per il bromografo con PIC16F84A
 
    RB0-3 -> 4 Bit del numero da visualizzare sul diplay
-   RB4-6 -> 3 Bit che indica quale diplay visualizzare (Multiplex)
+   RB4-6 -> 3 Bit che indicano quale diplay e da visualizzare (Multiplexing)
    RB7   -> 1 Bit che abilita o disabilita un output
    
    RA0   -> Tasto 1 (Start o Stop del conteggio)
    RA1   -> Tasto 2 (Set o Store dei secondi da conteggiare)
    RA2   -> Tasto 3 (Aumenta i secondi per il conteggio)
    RA3   -> Tasto 4 (Diminuisce i secondi per il conteggio)
+   
+   N.B. E' stato sviluppato per un quarzo da 4Mhz
 
 */
 
@@ -15,31 +19,28 @@
 #define DISPLAY_VALUE PORTB
 
 unsigned char ucNumDisplay;  // Numero del diplay attivo in un certo istante
-int uiSecondi_Attuale; // Numero di secondi trascorsi. Deve essere signed!
+int uiSecondi_Attuale;   // Numero di secondi trascorsi. Deve essere signed!
 unsigned int uiSecondi_Fine; // Numero di secondi a cui fermare il conteggio
 unsigned char ucOutEnabled;  // Abilita l'uscita se è uguale a 128
 
-unsigned int uiContTmp; // Contatore temporaneo per gli interrupt
+unsigned int uiContTmp;      // Contatore temporaneo per gli interrupt
 
 // Gestion dell'interrupt
-void interrupt()
-{
+void interrupt() {
   uiContTmp++;
   TMR0 = 96;
   INTCON = 0x20;       // Set T0IE, clear T0IF
 }
 
 // Procedura per visualizzare uiSecondi_Attuale
-void DisplayNum (void)
-{
+void DisplayNum (void) {
  unsigned char ucSecondi_Unita;
  unsigned char ucSecondi_Decine;
  unsigned char ucSecondi_Minuti;
  unsigned int uiSecondi;
 
  // Evito di fare i conti se uiSecondi_Attuale è nullo
- if (uiSecondi_Attuale > 0)
- {
+ if (uiSecondi_Attuale > 0)  {
     uiSecondi = uiSecondi_Attuale;
 
     ucSecondi_Minuti = uiSecondi / 60;
@@ -74,8 +75,7 @@ void DisplayNum (void)
 } // END void DisplayNum (void)
 
 
-void main (void)
-{
+void main (void) {
   char cEsciLoop;
   unsigned int i; // Variabile temporanea per i contatori
   unsigned char j,k; // Variabili temporanea per accelerare i tasti UP/DOWN
@@ -95,7 +95,7 @@ void main (void)
   uiContTmp = 0;
   TMR0 = 96;
 
-  // Leggo dalla Flash memory il tempo settato in precedenza
+  //Leggo dalla Flash memory il tempo settato in precedenza
   //uiSecondi_Fine = Flash_Read(0x0A30);
   //if (uiSecondi_Fine >= 585) uiSecondi_Fine = 585;
   
@@ -132,9 +132,9 @@ void main (void)
           {
             uiSecondi_Attuale--;
             uiContTmp = 0;
-            // Recupera del tempo se supera i 2 minuti
+            // Recupera del tempo se supera i 2 minuti in modo da correggere
+            // la deriva temporale.
             if (uiSecondi_Attuale < 120) uiMaxInterrupt = 180;
-            
           }
           // Premuto il tasto 0 come stop ma fermo solo se sono trascorsi
           // almeno 2 secondi
@@ -171,11 +171,11 @@ void main (void)
         while (PORTA.F2 == 0)
         {
           j = j + k;
-          if (j >= 10)  k = 5;
-          if (j >= 60)  k = 30;
+          if (j >= 10)  k = 5;  // Anzichè di incrementare di uno incremento
+          if (j >= 60)  k = 30; // di 5 e poi di 30 per fare prima.
 
-          for (i=0;i<50;i++)
-          {
+          //Ciclo di 50ms circa di visualizzazione dei diplay
+          for (i=0;i<50;i++) {
             DisplayNum();
             Delay_ms(1);
           }
@@ -184,8 +184,7 @@ void main (void)
                     uiSecondi_Attuale = uiSecondi_Attuale + k;
           else uiSecondi_Attuale = 1;
 
-          for (i=0;i<50;i++)
-          {
+          for (i=0;i<50;i++) {
             DisplayNum();
             Delay_ms(1);
           }
