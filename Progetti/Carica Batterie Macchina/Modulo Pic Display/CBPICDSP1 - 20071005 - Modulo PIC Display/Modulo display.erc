@@ -1,0 +1,17 @@
+EAGLE Version 4.14 Copyright (c) 1988-2005 CadSoft
+
+Electrical Rule Check for D:/Programmi/eagle-4.14/projects/Carica Batteria v2.0/20071005 - Modulo PIC Display/Modulo display.sch at 25/10/2007 22.11.41 
+
+WARNING: Sheet 1/1: unconnected Pin: RS232-5 1
+WARNING: Sheet 1/1: unconnected Pin: RS232-6 1
+WARNING: Sheet 1/1: SUPPLY Pin VSS overwritten with GND
+WARNING: Sheet 1/1: SUPPLY Pin VCC overwritten with N$30
+WARNING: Sheet 1/1: POWER Pin U1P1 VDD connected to N$30
+WARNING: Sheet 1/1: POWER Pin DS1 VCC connected to N$30
+WARNING: Sheet 1/1: POWER Pin DS1 VSS connected to GND
+WARNING: Sheet 1/1: POWER Pin DS1 VEE connected to N$2
+
+Board and schematic are consistent
+
+    0 errors
+    8 warnings

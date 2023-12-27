@@ -1,0 +1,22 @@
+PER IL CODICE SCRITTO FARE I SEGUENTI COLLEGAMENTI :
+
+
+Strip sulla basetta -> Numero Pin PIC 16f876A
+
+Ai Transistor
+ O -> 11
+ O -> 12
+ O -> 13
+ O -> 14
+
+Al CD4511
+ O -> 23
+ O -> 24
+ O -> 25
+ O -> 22
+
+Ai DP dei Diplay
+ O -> N.C.
+ O -> N.C.
+ O -> N.C.
+ O -> N.C.

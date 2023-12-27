@@ -1,0 +1,13 @@
+EAGLE Version 4.14 Copyright (c) 1988-2005 CadSoft
+
+Electrical Rule Check for D:/Eagle/Eagle 4.14/projects/Adattatori/TDA7374A/TDA7374A.sch at 16/12/2006 16.24.44 
+
+WARNING: Sheet 1/1: POWER Pin IC1 VCC3-4 connected to VCC
+WARNING: Sheet 1/1: POWER Pin IC1 PWRGND connected to GND
+WARNING: Sheet 1/1: POWER Pin IC1 SGNG connected to GND
+WARNING: Sheet 1/1: POWER Pin IC1 VCC1-2 connected to VCC
+
+Board and schematic are consistent
+
+    0 errors
+    4 warnings

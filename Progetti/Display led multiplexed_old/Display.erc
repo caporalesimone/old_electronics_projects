@@ -1,0 +1,14 @@
+EAGLE Version 4.14 Copyright (c) 1988-2005 CadSoft
+
+Electrical Rule Check for D:/Elettronica/Schemi Elettrici/Display led multiplexed/Display.sch at 03/07/2008 15.04.57 
+
+WARNING: Sheet 1/1: POWER Pin IC1P VSS connected to GND
+WARNING: Sheet 1/1: POWER Pin IC1P VDD connected to VCC
+WARNING: Sheet 1/1, Net N$25: missing Junction at (3 -0.5)
+WARNING: Sheet 1/1, Net GND: missing Junction at (4.2 -1)
+WARNING: Sheet 1/1, Net N$31: missing Junction at (1.2 0)
+
+Board and schematic are consistent
+
+    0 errors
+    5 warnings

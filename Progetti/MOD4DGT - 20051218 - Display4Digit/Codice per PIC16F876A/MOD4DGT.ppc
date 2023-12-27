@@ -1,0 +1,19 @@
+[DeviceName]
+Value=P16F876A
+[DeviceClock]
+Value=8
+[MainUnit]
+Value=MOD4DGT.c
+[DeviceFlags]
+Count=3
+Value0=_LVP_OFF = $3F7F
+Value1=_WDT_OFF = $3FFB
+Value2=_HS_OSC = $3FFE
+[ProjectFiles]
+Count=1
+Value0=MOD4DGT.c
+[SearchPath]
+Count=3
+Value0=C:\MicroC\Defs\
+Value1=C:\MicroC\Uses\p16\
+Value2=D:\Elettronica\Progetti Completati\Display4Digit - MOD4DGT\Codice\

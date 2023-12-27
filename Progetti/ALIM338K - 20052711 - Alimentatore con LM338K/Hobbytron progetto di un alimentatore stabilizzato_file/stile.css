@@ -1,0 +1,51 @@
+BODY {
+	BACKGROUND-IMAGE: url(../image/large/bin.jpg)
+}
+.char {
+	FONT-FAMILY: verdana,trebuchet ms,sans-serif; TEXT-ALIGN: center
+}
+#title {
+	BORDER-RIGHT: black thin solid; PADDING-RIGHT: 20px; BORDER-TOP: black thin solid; PADDING-LEFT: 20px; FONT-SIZE: 32px; BACKGROUND: #90aeff; PADDING-BOTTOM: 8px; BORDER-LEFT: black thin solid; COLOR: #000000; PADDING-TOP: 10px; BORDER-BOTTOM: black thin solid; FONT-FAMILY: verdana,trebuchet ms,sans-serif; LETTER-SPACING: 5px; POSITION: relative
+}
+#warning {
+	FONT-WEIGHT: bold; COLOR: #ff0000; FONT-FAMILY: verdana,trebuchet ms,sans-serif; TEXT-ALIGN: center
+}
+#nav {
+	MARGIN-TOP: 3px; WIDTH: 100%
+}
+#content {
+	PADDING-RIGHT: 5px; MARGIN-TOP: 1px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; TEXT-INDENT: 30px; PADDING-TOP: 5px; FONT-FAMILY: verdana,trebuchet ms,sans-serif; TEXT-ALIGN: justify
+}
+#smallcp {
+	FONT-SIZE: 12px; FONT-FAMILY: verdana,trebuchet ms,sans-serif; TEXT-ALIGN: justify
+}
+#lownav {
+	BORDER-RIGHT: black thin solid; BORDER-TOP: black thin solid; MARGIN-TOP: 1px; FONT-WEIGHT: bold; BACKGROUND: #90aeff; BORDER-LEFT: black thin solid; BORDER-BOTTOM: black thin solid; FONT-FAMILY: verdana, trebuchet ms, sans-serif; LETTER-SPACING: 3px; TEXT-ALIGN: center
+}
+#leftside {
+	FONT-FAMILY: verdana, trebuchet ms, sans-serif; TEXT-ALIGN: left
+}
+#grasso {
+	FONT-WEIGHT: bold; FONT-FAMILY: verdana, trebuchet ms, sans-serif; TEXT-ALIGN: left
+}
+#centerside {
+	FONT-FAMILY: verdana, trebuchet ms, sans-serif; TEXT-ALIGN: center
+}
+TD.highlite {
+	FONT-WEIGHT: bold; BACKGROUND: #ff0000; FONT-FAMILY: verdana,trebuchet ms,sans-serif; TEXT-ALIGN: center
+}
+TD.center {
+	TEXT-ALIGN: center
+}
+A:link {
+	FONT-WEIGHT: bold; COLOR: #0000ff; FONT-FAMILY: verdana, trebuchet ms, sans-serif; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-WEIGHT: bold; BACKGROUND: #ff9966; COLOR: #0000ff; FONT-FAMILY: verdana, trebuchet ms, sans-serif; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-WEIGHT: bold; COLOR: #990099; FONT-FAMILY: verdana, trebuchet ms, sans-serif; TEXT-DECORATION: none
+}
+A:active {
+	FONT-WEIGHT: bold; COLOR: #ff0000; FONT-FAMILY: verdana, trebuchet ms, sans-serif; TEXT-DECORATION: none
+}

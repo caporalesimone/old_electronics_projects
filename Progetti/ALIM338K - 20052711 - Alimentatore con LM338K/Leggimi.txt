@@ -1,0 +1,15 @@
+Alimentatore stabilizzato con regolatore LM338K limtiato in corrente a 5A.
+
+
+Da datasheet LM338K : 
+
+Vout Min : 1,2 V
+Vout Max : 32 V
+
+Max Corrente : 5 A
+Max Corrente di picco : 7A
+
+Vin - Vout <= 35V
+
+
+

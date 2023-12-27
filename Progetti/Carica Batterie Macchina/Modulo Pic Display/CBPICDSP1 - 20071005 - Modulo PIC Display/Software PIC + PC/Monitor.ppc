@@ -1,0 +1,35 @@
+[DeviceName]
+Value=P16F876A
+[DeviceClock]
+Value=20
+[MainUnit]
+Value=Monitor.c
+[DeviceFlags]
+Count=3
+Value0=_LVP_OFF = $3F7F
+Value1=_WDT_OFF = $3FFB
+Value2=_HS_OSC = $3FFE
+Value3=_DEBUG_ON = $37FF
+[BuildType]
+bType=0
+[ProjectFiles]
+Count=1
+Value0=MonitorCaricaBatterie.c
+[HeaderFiles]
+Count=2
+Value0=Monitor.c
+Value1=MonitorCaricaBatterie.c
+[ObjLibFiles]
+Count=0
+[EEPROMinfo]
+isused=0
+[SearchPath]
+Count=6
+Value0=C:\mikroC\Defs\
+Value1=C:\mikroC\Uses\p16\
+Value2=D:\PIC\MonitorCaricaBatteria\
+Value3=D:\mikroC\Defs\
+Value4=D:\mikroC\Uses\p16\
+Value5=D:\#Progetti\MonitorCaricaBatteria\
+[IncludePath]
+Count=0

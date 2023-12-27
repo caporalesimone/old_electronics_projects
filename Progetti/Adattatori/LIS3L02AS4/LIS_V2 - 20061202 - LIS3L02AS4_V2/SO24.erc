@@ -1,0 +1,17 @@
+EAGLE Version 4.14 Copyright (c) 1988-2005 CadSoft
+
+Electrical Rule Check for D:/Eagle/Eagle 4.14/projects/Adattatori/LIS3L02AS4_V2/SO24.sch at 01/12/2006 19.34.57 
+
+ERROR: Sheet 1/1: unconnected INPUT Pin: U$1 4
+ERROR: Sheet 1/1: unconnected INPUT Pin: U$1 3
+ERROR: Sheet 1/1: unconnected INPUT Pin: U$1 2
+ERROR: Sheet 1/1: unconnected INPUT Pin: U$1 1
+ERROR: Sheet 1/1: unconnected INPUT Pin: U$1 5
+WARNING: Sheet 1/1, Net N$10: missing Junction at (3.3 2.6)
+WARNING: Sheet 1/1: Nets N$7 and N$10 too close at (1.7 1.6)
+WARNING: Sheet 1/1: Nets N$7 and N$10 too close at (1.7 1.6)
+
+Board and schematic are consistent
+
+    5 errors
+    3 warnings

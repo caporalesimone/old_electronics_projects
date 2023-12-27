@@ -1,0 +1,14 @@
+EAGLE Version 4.14 Copyright (c) 1988-2005 CadSoft
+
+Electrical Rule Check for D:/Programmi/eagle-4.14/projects/MAX232 - SMD_V1/Max232.sch at 28/06/2007 18.08.15 
+
+WARNING: Sheet 1/1: SUPPLY Pin VCC overwritten with GND
+ERROR: Sheet 1/1: unconnected INPUT Pin: IC1 T1IN
+ERROR: Sheet 1/1: unconnected INPUT Pin: IC1 T2IN
+ERROR: Sheet 1/1: unconnected INPUT Pin: IC1 R1IN
+ERROR: Sheet 1/1: unconnected INPUT Pin: IC1 R2IN
+
+No board loaded - consistency has not been checked
+
+    4 errors
+    1 warnings

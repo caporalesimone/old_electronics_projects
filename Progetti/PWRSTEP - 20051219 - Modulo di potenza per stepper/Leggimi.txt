@@ -1,0 +1,27 @@
+DIsposizione dei connettori
+
+
+
+                                                  O
+						  O 4 Fasi del motore
+						  O
+						  O
+
+
+						  O Comune del motore
+						  O
+
+
+
+
+
+     O O O O             O O               O  O
+
+  4 Bit POsizione    GND del PIC           +  -
+                                    Alimetaz. Motore
+
+
+
+
+Il primo circuito costruito monta dei TIP 121 che se ben raffreddati
+lavorano fino a 5A

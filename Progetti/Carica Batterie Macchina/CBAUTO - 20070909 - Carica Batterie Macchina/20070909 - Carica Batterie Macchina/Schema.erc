@@ -1,0 +1,14 @@
+EAGLE Version 4.14 Copyright (c) 1988-2005 CadSoft
+
+Electrical Rule Check for D:/Programmi/eagle-4.14/projects/20070909 - Carica Batterie Macchina/Schema.sch at 11/09/2007 12.46.57 
+
+WARNING: Sheet 1/1: POWER Pin IC1P VSS connected to GND
+WARNING: Sheet 1/1: POWER Pin IC1P VDD connected to VCC
+WARNING: Sheet 1/1: POWER Pin IC2P V+ connected to VCC
+WARNING: Sheet 1/1: POWER Pin IC2P V- connected to GND
+WARNING: Sheet 1/1, Net N$23: missing Junction at (7.1 0.1)
+
+Board and schematic are consistent
+
+    0 errors
+    5 warnings
